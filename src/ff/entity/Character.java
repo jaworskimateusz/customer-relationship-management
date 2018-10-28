@@ -23,7 +23,7 @@ public class Character {
 	public Character() {
 		
 	}
-
+	
 	public int getId() {
 		return id;
 	}
