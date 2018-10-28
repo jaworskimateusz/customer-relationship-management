@@ -20,13 +20,13 @@ public class TestDbServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String user = "springstudent";
-		String password = "springstudent";
+		String user = "fast";
+		String password = "fast";
 		
-		String url = "jdbc:mysql://localhost:3306/web_customer_tracker?useSSL=false&serverTimezone=UTC";
+		String url = "jdbc:mysql://localhost:3306/fast-and-furious?useSSL=false&serverTimezone=UTC";
 		String driver = "com.mysql.cj.jdbc.Driver";
 		try {
-			PrintWriter out= response.getWriter();
+			PrintWriter out = response.getWriter();
 			System.out.println("\nConnecting to database: " + driver);
 			Class.forName(driver);
 			Connection connection = DriverManager.getConnection(url, user, password);

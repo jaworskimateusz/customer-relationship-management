@@ -1,4 +1,4 @@
-package crm.dao;
+package ff.dao;
 
 import java.util.List;
 
@@ -9,21 +9,21 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-
-import crm.entity.Customer;
+import ff.entity.Character;
 
 @Repository
-public class CustomerDAOImpl implements CustomerDAO {
+public class CharacterDAOImpl implements CharacterDAO {
 
 	@Autowired
 	private SessionFactory sessionFactory;
 	
 	@Override
 	@Transactional
-	public List<Customer> getCustomers() {
+	public List<Character> getCharacters() {
 		Session session = sessionFactory.getCurrentSession();
-		Query<Customer> query = session.createQuery("from Customer", Customer.class);
-		List<Customer> customers = query.getResultList();
-		return customers;
+		Query<Character> query = session.createQuery("FROM Character", Character.class);
+		List<Character> characters = query.getResultList();
+		return characters;
 	}
+
 }

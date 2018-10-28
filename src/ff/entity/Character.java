@@ -1,11 +1,11 @@
-package crm.entity;
+package ff.entity;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name="customer")
-public class Customer {
-	
+@Table(name="character")
+public class Character {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	@Column(name="id")
@@ -17,11 +17,19 @@ public class Customer {
 	@Column(name="last_name")
 	private String lastName;
 	
-	@Column(name="email")
-	private String email;
+	@Column(name="car")
+	private String car;
 	
-	public Customer() {
+	public Character() {
 		
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
 	}
 
 	public String getFirstName() {
@@ -40,18 +48,18 @@ public class Customer {
 		this.lastName = lastName;
 	}
 
-	public String getEmail() {
-		return email;
+	public String getCar() {
+		return car;
 	}
 
-	public void setEmail(String email) {
-		this.email = email;
+	public void setCar(String car) {
+		this.car = car;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", firstName=" + firstName + 
-				", lastName=" + lastName + ", email=" + email + "]";
+		return "Character [id=" + id + ", firstName=" + firstName + 
+				", lastName=" + lastName + ", car=" + car + "]";
 	}
 	
 }

@@ -2,16 +2,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>List Customers</title>
+	<title>Fast and Furious characters</title>
 	<link type="text/css" rel="stylesheet" 
 		href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 <body>
-
-<main>
 	<div id="wrapper">
 		<div id="header">
-			<h2>Customer Relationship Manager</h2>
+			<h2>Fast and Furious</h2>
 		</div>
 		<div id="container">
 			<div id="content">
@@ -19,19 +17,18 @@
 					<tr>
 						<th>First Name</th>
 						<th>Last Name</th>
-						<th>Email</th>
+						<th>Car</th>
 					</tr>
-					<c:forEach var="customer" items="${customers}">
+					<c:forEach var="character" items="${characters}">
 						<tr>
-							<td> ${customer.firstName} </td>
-							<td> ${customer.lastName} </td>
-							<td> ${customer.email} </td>
+							<td> ${character.firstName} </td>
+							<td> ${character.lastName} </td>
+							<td> ${character.car} </td>
 						</tr>
 					</c:forEach>
 				</table>
 			</div>
 		</div>
 	</div>
-</main>
 </body>
 </html>
