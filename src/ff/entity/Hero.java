@@ -3,8 +3,8 @@ package ff.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name="character")
-public class Character {
+@Table(name="hero")
+public class Hero {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -20,7 +20,7 @@ public class Character {
 	@Column(name="car")
 	private String car;
 	
-	public Character() {
+	public Hero() {
 		
 	}
 	
@@ -58,7 +58,7 @@ public class Character {
 
 	@Override
 	public String toString() {
-		return "Character [id=" + id + ", firstName=" + firstName + 
+		return "Hero [id=" + id + ", firstName=" + firstName + 
 				", lastName=" + lastName + ", car=" + car + "]";
 	}
 	

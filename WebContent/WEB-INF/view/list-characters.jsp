@@ -19,11 +19,11 @@
 						<th>Last Name</th>
 						<th>Car</th>
 					</tr>
-					<c:forEach var="character" items="${characters}">
+					<c:forEach var="hero" items="${heroes}">
 						<tr>
-							<td> ${character.firstName} </td>
-							<td> ${character.lastName} </td>
-							<td> ${character.car} </td>
+							<td> ${hero.firstName} </td>
+							<td> ${hero.lastName} </td>
+							<td> ${hero.car} </td>
 						</tr>
 					</c:forEach>
 				</table>

@@ -7,6 +7,7 @@ html, body{
     background-size: cover;
     overflow-x: hidden;
     width: 100%;
+    color: #fff;
 }
 
 table {   
@@ -20,7 +21,6 @@ th {
 	border:1px solid white;
 	background:rgb(255,140,0);
 	padding:10px;
-	color: #FFFFFF;
 }
 
 tr {
@@ -28,15 +28,15 @@ tr {
 	text-align:center;	
 }
  
-tr:nth-child(even) {background: #FFFFFF}
-tr:nth-child(odd) {background: #BBBBBB}	
  
 #wrapper {width: 80%; margin-top: 0px; }
 #header {width: 100%;  margin-top: 0px; padding:15px 0px 15px 15px;}
-#header h2 {width: 100%; margin:auto; color: #FFFFFF;}
+#header h2 {width: 100%; margin: 0 auto;}
 #container h3 {color: #000;}
 #container #content {margin-top: 20px;}
-
+#container {
+	margin-top: 240px;
+}
 .add-button {
 	border: 1px solid #666; 
 	border-radius: 5px; 

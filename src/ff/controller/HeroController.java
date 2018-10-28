@@ -7,20 +7,20 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ff.dao.CharacterDAO;
-import ff.entity.Character;
+import ff.dao.HeroDAO;
+import ff.entity.Hero;
 
 @Controller
-@RequestMapping("/characters")
-public class CharacterController {
+@RequestMapping("/heroes")
+public class HeroController {
 	
 	@Autowired
-	private CharacterDAO characterDAO;
+	private HeroDAO heroDAO;
 	
 	@RequestMapping("/list")
 	public String showList(Model model) {
-		List<Character> characters = characterDAO.getCharacters();
-		model.addAttribute("characters", characters);
+		List<Hero> heroes = heroDAO.getHeroes();
+		model.addAttribute("heroes", heroes);
 		return "list-characters";
 	}
 

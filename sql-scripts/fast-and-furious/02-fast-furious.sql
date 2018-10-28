@@ -14,10 +14,10 @@ USE `fast-and-furious`;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 
-DROP TABLE IF EXISTS `character`;
+DROP TABLE IF EXISTS `hero`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `character` (
+CREATE TABLE `hero` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `first_name` varchar(45) DEFAULT NULL,
   `last_name` varchar(45) DEFAULT NULL,
@@ -27,17 +27,17 @@ CREATE TABLE `character` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 
-LOCK TABLES `character` WRITE;
-/*!40000 ALTER TABLE `character` DISABLE KEYS */;
+LOCK TABLES `hero` WRITE;
+/*!40000 ALTER TABLE `hero` DISABLE KEYS */;
 
-INSERT INTO `character` VALUES 
+INSERT INTO `hero` VALUES 
 	(1,'Domminic','Torreto','Mazda RX-7'),
 	(2,'Brian','O Conner','Toyota Supra'),
 	(3,'Shaun','Boswell','Mitsubishi Lancer EVO IX '),
-	(4,'Han',null,'Mazda RX-7'),
+	(4,'Han','Lue','Mazda RX-7'),
 	(5,'Drift','King','Nissan 350Z');
 
-/*!40000 ALTER TABLE `character` ENABLE KEYS */;
+/*!40000 ALTER TABLE `hero` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

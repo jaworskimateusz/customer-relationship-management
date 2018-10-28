@@ -1,1 +1,1 @@
-<% response.sendRedirect("characters/list"); %>
+<% response.sendRedirect("heroes/list"); %>
