@@ -13,6 +13,8 @@
 		</div>
 		<div id="container">
 			<div id="content">
+			<input type="button" value="Add new" class="save" 
+					onclick="window.location.href='add'; return false;"/>
 				<table>
 					<tr>
 						<th>First Name</th>

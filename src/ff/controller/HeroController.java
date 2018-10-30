@@ -24,5 +24,11 @@ public class HeroController {
 		model.addAttribute("heroes", heroes);
 		return "list-characters";
 	}
+	
+	@GetMapping("/add")
+	public String showFormForAdd(Model model) {
+		model.addAttribute("hero", new Hero());
+		return "add-hero";
+	}
 
 }
