@@ -2,6 +2,8 @@ package crm.entity;
 
 import javax.persistence.*;
 
+
+
 @Entity
 @Table(name="customer")
 public class Customer {
