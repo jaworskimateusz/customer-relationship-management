@@ -16,7 +16,7 @@
 		<div id="container">
 		<h3>Add new hero</h3>
 			<div id="content">
-				<form:form action="" modelAttribute="hero" method="POST">
+				<form:form action="saveHero" modelAttribute="hero" method="POST">
 					<label>First Name:</label>
 					<form:input path="firstName"/>
 					<label>Last Name:</label>

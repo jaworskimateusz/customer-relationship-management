@@ -6,21 +6,23 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import ff.dao.HeroDAO;
 import ff.entity.Hero;
+import ff.service.HeroService;
 
 @Controller
 @RequestMapping("/heroes")
 public class HeroController {
 	
 	@Autowired
-	private HeroDAO heroDAO;
+	private HeroService heroService;
 	
 	@GetMapping("/list")
 	public String showList(Model model) {
-		List<Hero> heroes = heroDAO.getHeroes();
+		List<Hero> heroes = heroService.getHeroes();
 		model.addAttribute("heroes", heroes);
 		return "list-characters";
 	}
@@ -29,6 +31,12 @@ public class HeroController {
 	public String showFormForAdd(Model model) {
 		model.addAttribute("hero", new Hero());
 		return "add-hero";
+	}
+	
+	@PostMapping("/saveHero")
+	public String saveHero(@ModelAttribute("hero") Hero hero) {
+		heroService.saveHero(hero);
+		return "redirect:/heroes/list";
 	}
 
 }

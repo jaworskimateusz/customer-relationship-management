@@ -21,4 +21,10 @@ public class HeroServiceImpl implements HeroService {
 		return heroDAO.getHeroes();
 	}
 
+	@Override
+	@Transactional
+	public void saveHero(Hero hero) {
+		heroDAO.saveHero(hero);
+	}
+
 }

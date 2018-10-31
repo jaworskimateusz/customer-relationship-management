@@ -19,12 +19,17 @@ public class HeroDAOImpl implements HeroDAO {
 	private SessionFactory sessionFactory;
 	
 	@Override
-	@Transactional
 	public List<Hero> getHeroes() {
 		Session session = sessionFactory.getCurrentSession();
-		Query<Hero> query = session.createQuery("from Hero", Hero.class);
+		Query<Hero> query = session.createQuery("from Hero order by firstName", Hero.class);
 		List<Hero> heroes = query.getResultList();
 		return heroes;
+	}
+
+	@Override
+	public void saveHero(Hero hero) {
+		Session session = sessionFactory.getCurrentSession();
+		session.save(hero);
 	}
 
 }

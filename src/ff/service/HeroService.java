@@ -8,4 +8,6 @@ public interface HeroService {
 	
 	public List<Hero> getHeroes();
 
+	public void saveHero(Hero hero);
+
 }
