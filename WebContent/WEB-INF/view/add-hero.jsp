@@ -17,6 +17,7 @@
 		<h3>Add new hero</h3>
 			<div id="content">
 				<form:form action="saveHero" modelAttribute="hero" method="POST">
+					<form:hidden path="id" />
 					<label>First Name:</label>
 					<form:input path="firstName"/>
 					<label>Last Name:</label>

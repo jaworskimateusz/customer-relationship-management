@@ -31,6 +31,14 @@ h2 {
 .save:hover {
 	opacity: 0.95;
 }
+a {
+	text-decoration: none;
+	color: #fff;
+}
+a:hover {
+	text-decoration: underline;
+}
+
  
 th {
 	border:1px solid white;
@@ -61,7 +69,6 @@ tr {
 	font-weight: bold;
 	width: 120px; 
 	padding: 5px 10px; 
-	
 	margin-bottom: 15px;
 	background: #cccccc;
 }

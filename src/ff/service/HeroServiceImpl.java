@@ -27,4 +27,10 @@ public class HeroServiceImpl implements HeroService {
 		heroDAO.saveHero(hero);
 	}
 
+	@Override
+	@Transactional
+	public Hero getHero(int id) {
+		return heroDAO.getHero(id);
+	}
+
 }

@@ -10,4 +10,6 @@ public interface HeroService {
 
 	public void saveHero(Hero hero);
 
+	public Hero getHero(int id);
+
 }

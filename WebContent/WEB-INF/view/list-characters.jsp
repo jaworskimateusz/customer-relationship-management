@@ -20,12 +20,19 @@
 						<th>First Name</th>
 						<th>Last Name</th>
 						<th>Car</th>
+						<th>Edit</th>
 					</tr>
 					<c:forEach var="hero" items="${heroes}">
+						<c:url var="updateLink" value="/heroes/update">
+							<c:param name="heroId" value="${hero.id}"/>
+						</c:url>
 						<tr>
 							<td> ${hero.firstName} </td>
 							<td> ${hero.lastName} </td>
 							<td> ${hero.car} </td>
+							<td>
+								<a href="${updateLink}">Update</a>
+							</td>
 						</tr>
 					</c:forEach>
 				</table>

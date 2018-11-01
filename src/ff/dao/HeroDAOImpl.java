@@ -8,7 +8,6 @@ import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
 import ff.entity.Hero;
 
@@ -29,7 +28,13 @@ public class HeroDAOImpl implements HeroDAO {
 	@Override
 	public void saveHero(Hero hero) {
 		Session session = sessionFactory.getCurrentSession();
-		session.save(hero);
+		session.saveOrUpdate(hero);
+	}
+
+	@Override
+	public Hero getHero(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		return session.get(Hero.class,id);
 	}
 
 }

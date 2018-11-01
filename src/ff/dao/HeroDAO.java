@@ -8,4 +8,6 @@ public interface HeroDAO {
 
 	public void saveHero(Hero hero);
 
+	public Hero getHero(int id);
+
 }

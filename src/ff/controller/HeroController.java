@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import ff.entity.Hero;
 import ff.service.HeroService;
@@ -37,6 +38,13 @@ public class HeroController {
 	public String saveHero(@ModelAttribute("hero") Hero hero) {
 		heroService.saveHero(hero);
 		return "redirect:/heroes/list";
+	}
+	
+	@GetMapping("/update")
+	public String updateHero(@RequestParam("heroId") int id, Model model) {
+		Hero hero = heroService.getHero(id);
+		model.addAttribute("hero",hero);
+		return "add-hero";
 	}
 
 }
