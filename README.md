@@ -1,4 +1,4 @@
-# customer-relationship-management
+# Fast and Furious characters list
 Spring MVC and Hibernate web app
 
 ## Description 
