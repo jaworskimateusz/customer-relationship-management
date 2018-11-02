@@ -33,4 +33,10 @@ public class HeroServiceImpl implements HeroService {
 		return heroDAO.getHero(id);
 	}
 
+	@Override
+	@Transactional
+	public void deleteHero(int id) {
+		heroDAO.deleteHero(id);
+	}
+
 }

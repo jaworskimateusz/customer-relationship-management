@@ -26,12 +26,16 @@
 						<c:url var="updateLink" value="/heroes/update">
 							<c:param name="heroId" value="${hero.id}"/>
 						</c:url>
+						<c:url var="deleteLink" value="/heroes/delete">
+							<c:param name="heroId" value="${hero.id}"/>
+						</c:url>
 						<tr>
 							<td> ${hero.firstName} </td>
 							<td> ${hero.lastName} </td>
 							<td> ${hero.car} </td>
 							<td>
-								<a href="${updateLink}">Update</a>
+								<a href="${updateLink}"> Update</a>
+								<a href="${deleteLink}"> Delete</a>
 							</td>
 						</tr>
 					</c:forEach>

@@ -46,5 +46,11 @@ public class HeroController {
 		model.addAttribute("hero",hero);
 		return "add-hero";
 	}
+	
+	@GetMapping("/delete")
+	public String deleteHero(@RequestParam("heroId") int id) {
+		heroService.deleteHero(id);
+		return "redirect:/heroes/list";
+	}
 
 }

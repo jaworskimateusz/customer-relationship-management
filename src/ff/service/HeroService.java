@@ -12,4 +12,6 @@ public interface HeroService {
 
 	public Hero getHero(int id);
 
+	public void deleteHero(int id);
+
 }

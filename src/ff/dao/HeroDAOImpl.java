@@ -37,4 +37,11 @@ public class HeroDAOImpl implements HeroDAO {
 		return session.get(Hero.class,id);
 	}
 
+	@Override
+	public void deleteHero(int id) {
+		Session session = sessionFactory.getCurrentSession();
+		Hero heroToDelete = session.get(Hero.class, id);
+		session.delete(heroToDelete);
+	}
+
 }

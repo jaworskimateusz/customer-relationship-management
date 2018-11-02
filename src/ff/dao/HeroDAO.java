@@ -10,4 +10,6 @@ public interface HeroDAO {
 
 	public Hero getHero(int id);
 
+	public void deleteHero(int id);
+
 }
