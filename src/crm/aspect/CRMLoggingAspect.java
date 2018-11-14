@@ -38,7 +38,7 @@ public class CRMLoggingAspect {
 					returning="result")
 	public void afterReturning(JoinPoint joinPoint, Object result) {
 		logger.info("\n>>>>>@AfterReturning method: " + joinPoint.getSignature().toString() + "\n");
-		logger.info("\n>>>>> result: " + result);
+		logger.info("\n\n>>>>> result: " + result);
 	}
 	
 	private void diplayArguments(Object [] args) {
