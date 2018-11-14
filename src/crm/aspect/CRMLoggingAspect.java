@@ -29,7 +29,7 @@ public class CRMLoggingAspect {
 	
 	@Before("forApplication()") 
 	public void before(JoinPoint joinPoint) {
-		logger.info("\n>>>>>@Before method: " + joinPoint.getSignature().toString() + "\n");
+		logger.info("\n\n>>>>>@Before method: " + joinPoint.getSignature().toString() + "\n");
 		Object [] args = joinPoint.getArgs();
 		diplayArguments(args);
 	}
